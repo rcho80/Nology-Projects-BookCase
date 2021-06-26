@@ -1,0 +1,16 @@
+.grid {
+  display: grid;
+
+  &__center {
+    justify-items: center;
+  }
+
+  &__align-center {
+    align-items: center;
+    text-align: center;
+  }
+
+  &__justify-content {
+    justify-content: center;
+  }
+}

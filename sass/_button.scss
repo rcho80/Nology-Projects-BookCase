@@ -1,0 +1,19 @@
+@use "devices" as devices;
+
+.button {
+    @include devices.phone {
+        width: 100px;
+    }
+
+    @include devices.tablet {
+        width: 200px;
+    }
+
+    @include devices.tablet-landscape {
+        width: 300px;
+    }
+
+    @include devices.laptop {
+        width: 500px;
+    }
+}
