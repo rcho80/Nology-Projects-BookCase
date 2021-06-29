@@ -55,6 +55,7 @@ body {
 }
 
 :root {
+  --dark: rgb(37, 19, 19);
   --primary: #eae7dc;
   --grey: #8e8d8a;
   --light: #d8c3a5;
@@ -70,6 +71,11 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media only screen and (max-width: 576px) {
+  header {
+    background-size: inherit;
+  }
+}
 
 body {
   background: var(--primary);
@@ -77,6 +83,18 @@ body {
   font-family: "Lato", sans-serif;
   line-height: 1.8;
   font-size: 1.2rem;
+}
+@media only screen and (max-width: 576px) {
+  body {
+    line-height: 1.4;
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  body {
+    line-height: 1.6;
+    font-size: 1.3rem;
+  }
 }
 
 .title {
@@ -86,11 +104,27 @@ body {
   text-align: center;
   margin-bottom: 0;
 }
+@media only screen and (max-width: 576px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .title {
+    font-size: 4rem;
+  }
+}
 .title__intro {
   text-align: center;
   color: var(--red);
   font-size: 1.4rem;
   font-family: "Open Sans", sans-serif;
+}
+@media only screen and (max-width: 576px) {
+  .title__intro {
+    font-size: 1.2rem;
+    padding: 0 20px;
+  }
 }
 
 .form {
@@ -100,17 +134,38 @@ body {
   font-size: 1.2rem;
   color: black;
 }
+@media only screen and (max-width: 576px) {
+  .form {
+    font-size: 1.1rem;
+    padding: 10px;
+  }
+}
 .form__input {
   margin: 0 15px;
   height: 30px;
   font-size: 1.2rem;
+}
+@media only screen and (max-width: 576px) {
+  .form__input {
+    font-size: 1rem;
+    height: 20px;
+    margin: 0;
+    padding: 0 10px;
+    max-width: 150px;
+  }
 }
 .form__btn {
   font-size: 1.2rem;
   font-family: "Lato", sans-serif;
   cursor: pointer;
   border-radius: 5px;
-  line-height: 1.8;
+  line-height: 1.6;
+}
+@media only screen and (max-width: 576px) {
+  .form__btn {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
 }
 .form__btn:hover {
   background-color: var(--light);
@@ -120,29 +175,108 @@ body {
   min-height: 28vh;
   padding: 15px;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.4rem;
+  gap: 5rem;
+}
+@media only screen and (max-width: 576px) {
+  .cards {
+    min-height: 10vh;
+    padding: 10px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.3rem;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .cards {
+    min-height: 10vh;
+    padding: 10px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+}
+.cards__flipBox {
+  background-color: transparent;
+  width: 700px;
+  height: 230px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 576px) {
+  .cards__flipBox {
+    width: 330px;
+    height: 180px;
+  }
+}
+.cards__flipBox:hover .cards__flipBox__inner {
+  transform: rotateY(180deg);
+}
+.cards__flipBox__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 1.8s;
+  transform-style: preserve-3d;
 }
 .cards__flipBox__inner__front {
   display: flex;
   background-color: white;
   border-radius: 10px;
   border: solid 2px var(--grey);
-  padding: 3PX;
-}
-.cards__flipBox__inner__front__card {
-  max-height: 220px;
-  max-width: 550px;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  line-height: 1.4;
+  padding: 3px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  text-align: left;
 }
 .cards__flipBox__inner__front__img {
-  height: 220px;
+  height: 100%;
   width: 158px;
   padding-right: 10px;
   object-fit: contain;
+}
+.cards__flipBox__inner__front__box {
+  display: block;
+  padding: 15px;
+}
+@media only screen and (max-width: 576px) {
+  .cards__flipBox__inner__front__box {
+    padding: 3px;
+  }
+}
+.cards__flipBox__inner__front__box__card {
+  margin: 0;
+  line-height: 1.6;
+}
+@media only screen and (max-width: 576px) {
+  .cards__flipBox__inner__front__box__card {
+    line-height: 1.2;
+    font-size: 0.8rem;
+  }
+}
+.cards__flipBox__inner__front__box__snip {
+  font-size: 1rem;
+}
+@media only screen and (max-width: 576px) {
+  .cards__flipBox__inner__front__box__snip {
+    line-height: 1;
+    font-size: 0.8rem;
+  }
+}
+.cards__flipBox__inner__back {
+  background-color: var(--light);
+  border-radius: 10px;
+  border: solid 2px var(--grey);
+  color: var(--dark);
+  transform: rotateY(180deg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: scroll;
+  text-align: left;
 }
 
 footer {

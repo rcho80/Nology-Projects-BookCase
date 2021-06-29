@@ -1,5 +1,6 @@
 import { getBooks } from "./api.js";
 import { createData } from "./dom-utils.js";
+import { truncate } from "./api.js";
 
 const form = document.getElementById("apiForm");
 
@@ -22,21 +23,35 @@ form.addEventListener("submit", async (event) => {
 
   books.map((book) => {
     createData(
+      "div",
+      `Publisher: ${book.volumeInfo?.publisher}`,
+      "div",
+      `Published Date: ${book.volumeInfo?.publishedDate}`,
+      "div",
+      `Retail Price: $${book.saleInfo.retailPrice?.amount}`,
+      "div",
+      `Language: ${book.volumeInfo?.language}`,
+      "div",
+      `Description: ${book.volumeInfo?.description}`,
       "img",
-      `${book.volumeInfo.imageLinks.thumbnail}`,
-      "P",
-      `Title: ${book.volumeInfo.title}, Author: ${book.volumeInfo.authors}, Description: ${book.searchInfo.textSnippet}`, "div", "div", "div", "div", output
+      `${book.volumeInfo.imageLinks?.thumbnail}`,
+      "h4",
+      `Title: ${truncate(book.volumeInfo?.title, 100)}`,
+      "h4",
+      `Author: ${truncate(book.volumeInfo?.authors, 70)}`,
+      "div",
+      "p",
+      `Brief: ${truncate(book.searchInfo?.textSnippet, 200)}`,
+      "div",
+      "div",
+      "div",
+      "div",
+      output
     );
-  });
-});
+  })
+  })
 
-// const click = document.getElementById('wrap');
-// click.addEventListener("click", () => {
 
-// })
 
-// items[0].volumeInfo.publisher;
-// items[0].volumeInfo.publishedDate;
-// items[0].volumeInfo.description;
-// items[0].saleInfo.retailPrice.amount;
-// items[0].volumeInfo.language;
+
+
