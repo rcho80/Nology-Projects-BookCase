@@ -83,7 +83,7 @@ export const createData = (
   flipBox__inner__back.appendChild(date);
   flipBox__inner__back.appendChild(price);
   flipBox__inner__back.appendChild(language);
- flipBox__inner__back.appendChild(description);
+  flipBox__inner__back.appendChild(description);
   flipBox__inner.appendChild(flipBox__inner__back);
 
   flipBox.appendChild(flipBox__inner);
