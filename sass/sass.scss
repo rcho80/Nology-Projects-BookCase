@@ -45,6 +45,11 @@ body {
   line-height: 1.6;
   font-size: 1.3rem;
   }
+
+  @include devices.tablet-landscape {
+  line-height: 1.6;
+  font-size: 1.3rem;
+  }
 }
 
 .title {
@@ -59,6 +64,10 @@ body {
   }
 
    @include devices.tablet {
+    font-size: 4rem;
+  }
+
+    @include devices.tablet-landscape {
     font-size: 4rem;
   }
 
@@ -136,6 +145,13 @@ body {
   }
 
   @include devices.tablet {
+  min-height: 10vh;
+  padding: 10px;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  }
+
+  @include devices.tablet-landscape  {
   min-height: 10vh;
   padding: 10px;
   grid-template-columns: repeat(1, 1fr);
@@ -222,7 +238,7 @@ body {
          }
 
         &__back {
-           background-color: var(--light);
+           background-color: var(--pink);
            border-radius: 10px;
            border: solid 2px var(--grey);
            color: var(--dark);

@@ -99,6 +99,12 @@ body {
     font-size: 1.3rem;
   }
 }
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  body {
+    line-height: 1.6;
+    font-size: 1.3rem;
+  }
+}
 
 .title {
   color: var(--red);
@@ -113,6 +119,11 @@ body {
   }
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
+  .title {
+    font-size: 4rem;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
   .title {
     font-size: 4rem;
   }
@@ -196,6 +207,14 @@ body {
     gap: 2rem;
   }
 }
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .cards {
+    min-height: 10vh;
+    padding: 10px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+}
 .cards__flipBox {
   background-color: transparent;
   width: 100%;
@@ -268,7 +287,7 @@ body {
   }
 }
 .cards__flipBox__inner__back {
-  background-color: var(--light);
+  background-color: var(--pink);
   border-radius: 10px;
   border: solid 2px var(--grey);
   color: var(--dark);
