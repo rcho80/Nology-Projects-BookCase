@@ -50,6 +50,9 @@ body {
 .grid__justify-content {
   justify-content: center;
 }
+.grid__gap {
+  gap: 1rem;
+}
 
 :root {
   --primary: #eae7dc;
@@ -107,26 +110,43 @@ body {
   font-family: "Lato", sans-serif;
   cursor: pointer;
   border-radius: 5px;
+  line-height: 1.8;
 }
 .form__btn:hover {
   background-color: var(--light);
 }
 
-.container {
-  padding: 50px;
-  min-height: 15vh;
-}
-
 .cards {
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  min-height: 28vh;
+  padding: 15px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.4rem;
 }
-.cards__card {
+.cards__flipBox__inner__front {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  border: solid 2px var(--grey);
+  padding: 3PX;
+}
+.cards__flipBox__inner__front__card {
+  max-height: 220px;
+  max-width: 550px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  line-height: 1.4;
+}
+.cards__flipBox__inner__front__img {
   height: 220px;
-  width: 550px;
+  width: 158px;
+  padding-right: 10px;
+  object-fit: contain;
 }
 
 footer {
   text-align: center;
-  padding-bottom: 5px;
 }
+
+/*# sourceMappingURL=style.css.map */
