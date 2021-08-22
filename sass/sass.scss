@@ -3,261 +3,248 @@
 @use "grid" as grid;
 @use "devices" as devices;
 
-
 :root {
-  --dark: rgb(37, 19, 19); 
-  --primary: #eae7dc;
-  --grey: #8e8d8a;
-  --light: #d8c3a5;
-  --red: #e85a4f;
-  --pink: #e98074;
-  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    --dark: rgb(37, 19, 19);
+    --primary: #eae7dc;
+    --grey: #8e8d8a;
+    --light: #d8c3a5;
+    --red: #e85a4f;
+    --pink: #e98074;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
 
 header {
-  padding: 25px;
-  background-image: url("../images/lights.jpg");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;  
-  
-  @include devices.phone {
-    background-size: inherit;
-  }
+    padding: 25px;
+    background-image: url("../images/lights.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include devices.phone {
+        background-size: inherit;
+    }
 }
 
 body {
-  margin: 0 auto;
-  padding: 0;
-  box-sizing: border-box;
-  background: var(--primary);
-  color: var(--grey);
-  font-family: "Lato", sans-serif;
-  line-height: 1.8;
-  font-size: 1.2rem;
-  
-  @include devices.phone {
-  line-height: 1.4;
-  font-size: 1rem;
-  }
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--primary);
+    color: var(--grey);
+    font-family: "Lato", sans-serif;
+    line-height: 1.8;
+    font-size: 1.2rem;
 
-  @include devices.tablet {
-  line-height: 1.6;
-  font-size: 1.3rem;
-  }
+    @include devices.phone {
+        line-height: 1.4;
+        font-size: 1rem;
+    }
 
-  @include devices.tablet-landscape {
-  line-height: 1.6;
-  font-size: 1.3rem;
-  }
+    @include devices.tablet {
+        line-height: 1.6;
+        font-size: 1.3rem;
+    }
+
+    @include devices.tablet-landscape {
+        line-height: 1.6;
+        font-size: 1.3rem;
+    }
 }
 
 .title {
-  color: var(--red);
-  font-size: 5rem;
-  font-weight: 400;
-  text-align: center;
-  margin-bottom: 0;
-   
-  @include devices.phone {
-   font-size: 2rem;
-  }
+    color: var(--red);
+    font-size: 5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 0;
 
-   @include devices.tablet {
-    font-size: 4rem;
-  }
+    @include devices.phone {
+        font-size: 2rem;
+    }
+
+    @include devices.tablet {
+        font-size: 4rem;
+    }
 
     @include devices.tablet-landscape {
-    font-size: 4rem;
-  }
+        font-size: 4rem;
+    }
 
-  
-  
-  &__intro {
-    text-align: center;
-    color: var(--red);
-    font-size: 1.4rem;
-    font-family: "Open Sans", sans-serif;
+    &__intro {
+        text-align: center;
+        color: var(--red);
+        font-size: 1.4rem;
+        font-family: "Open Sans", sans-serif;
 
-   @include devices.phone {
-   font-size: 1.2rem;
-   padding: 0 20px;
-  }
-  }
+        @include devices.phone {
+            font-size: 1.2rem;
+            padding: 0 20px;
+        }
+    }
 }
 
 .form {
-  background-color: var(--pink);
-  padding: 20px;
-  text-align: center;
-  font-size: 1.2rem;
-  color: black;
-
- 
-   @include devices.phone {
-   font-size: 1.1rem;
-   padding: 10px;
-  }
-
-  &__input {
-    margin: 0 15px;
-    height: 30px;
+    background-color: var(--pink);
+    padding: 20px;
+    text-align: center;
     font-size: 1.2rem;
-   
-    @include devices.phone {
-    font-size: 1rem;
-    height: 20px;
-    margin: 0;
-    padding: 0 10px;
-    max-width: 150px;
-  }
-  }
-
-  &__btn {
-    font-size: 1.2rem;
-    font-family: "Lato", sans-serif;
-    cursor: pointer;
-    border-radius: 5px;
-    line-height: 1.6;
+    color: black;
 
     @include devices.phone {
-    font-size: 1rem;
-    line-height: 1.2;
-  }
-
-    &:hover {
-      background-color: var(--light);
+        font-size: 1.1rem;
+        padding: 10px;
     }
-  }
+
+    &__input {
+        margin: 0 15px;
+        height: 30px;
+        font-size: 1.2rem;
+
+        @include devices.phone {
+            font-size: 1rem;
+            height: 20px;
+            margin: 0;
+            padding: 0 10px;
+            max-width: 150px;
+        }
+    }
+
+    &__btn {
+        font-size: 1.2rem;
+        font-family: "Lato", sans-serif;
+        cursor: pointer;
+        border-radius: 5px;
+        line-height: 1.6;
+
+        @include devices.phone {
+            font-size: 1rem;
+            line-height: 1.2;
+        }
+
+        &:hover {
+            background-color: var(--light);
+        }
+    }
 }
 
 .cards {
-  min-height: 28vh;
-  padding: 15px;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 5rem;
+    min-height: 28vh;
+    padding: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
 
-  @include devices.phone {
-  min-height: 10vh;
-  padding: 10px;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 1.3rem;
-  }
+    @include devices.phone {
+        min-height: 10vh;
+        padding: 10px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.3rem;
+    }
 
-  @include devices.tablet {
-  min-height: 10vh;
-  padding: 10px;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 2rem;
-  }
+    @include devices.tablet {
+        min-height: 10vh;
+        padding: 10px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
 
-  @include devices.tablet-landscape  {
-  min-height: 10vh;
-  padding: 10px;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 2rem;
-  }
+    @include devices.tablet-landscape {
+        min-height: 10vh;
+        padding: 10px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
 
-  &__flipBox { 
-     background-color: transparent;
-     width: 100%;
-     height: 230px;
-     perspective: 1000px;
-     cursor: pointer;
+    &__flipBox {
+        background-color: transparent;
+        width: 100%;
+        height: 230px;
+        perspective: 1000px;
+        cursor: pointer;
 
-     @include devices.phone {
-     width: 330px;
-     height: 180px;
-      }
+        @include devices.phone {
+            width: 330px;
+            height: 180px;
+        }
 
+        &:hover &__inner {
+            transform: rotateY(180deg);
+        }
 
-      &:hover &__inner {
-         transform: rotateY(180deg);
-      }
-         
-
-     &__inner {
-       position: relative;
-       width: 100%;
-       height: 100%;
-       text-align: center;
-       transition: 1.8s;
-       transform-style: preserve-3d;
-       
-
-       &__front {
-         display: flex;
-         background-color: white;
-         border-radius: 10px;
-         border: solid 2px var(--grey);
-         padding: 3px;
-         position: absolute;
-         width: 100%;
-         height: 100%;
-         -webkit-backface-visibility: hidden;
-         backface-visibility: hidden;
-         text-align: left;
-
-            &__img {
+        &__inner {
+            position: relative;
+            width: 100%;
             height: 100%;
-            width: 158px;
-            padding-right: 10px;
-            object-fit: contain;
+            text-align: center;
+            transition: 1.8s;
+            transform-style: preserve-3d;
+
+            &__front {
+                display: flex;
+                background-color: white;
+                border-radius: 10px;
+                border: solid 2px var(--grey);
+                padding: 3px;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                text-align: left;
+
+                &__img {
+                    height: 100%;
+                    width: 158px;
+                    padding-right: 10px;
+                    object-fit: contain;
+                }
+
+                &__box {
+                    display: block;
+                    padding: 15px;
+
+                    @include devices.phone {
+                        padding: 3px;
+                    }
+
+                    &__card {
+                        margin: 0;
+                        line-height: 1.6;
+
+                        @include devices.phone {
+                            line-height: 1.2;
+                            font-size: 0.8rem;
+                        }
+                    }
+
+                    &__snip {
+                        font-size: 1rem;
+
+                        @include devices.phone {
+                            line-height: 1;
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
             }
 
-                
-            &__box {
-               display: block;
-               padding: 15px;
-               
-               @include devices.phone {
-                 padding: 3px;
-                }
-                
-                  
-                &__card {
-                margin: 0;
-                line-height: 1.6;
-                
-                 @include devices.phone {
-                 line-height: 1.2;
-                 font-size: 0.8rem;
-                }            
-              }
-
-                 &__snip {
-                  font-size: 1rem;
-
-                 @include devices.phone {
-                 line-height: 1;
-                 font-size: .8rem;
-                }
-                } 
-
-            }   
-         }
-
-        &__back {
-           background-color: var(--pink);
-           border-radius: 10px;
-           border: solid 2px var(--grey);
-           color: var(--dark);
-           transform: rotateY(180deg);
-           position: absolute;
-           width: 100%;
-           height: 100%;
-           -webkit-backface-visibility: hidden;
-           backface-visibility: hidden;
-           overflow: scroll;
-           text-align: left;
-         }
-     }
-   
-  }  
+            &__back {
+                background-color: var(--pink);
+                border-radius: 10px;
+                border: solid 2px var(--grey);
+                color: var(--dark);
+                transform: rotateY(180deg);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                overflow: scroll;
+                text-align: left;
+            }
+        }
+    }
 }
-
 
 footer {
-  text-align: center;
+    text-align: center;
 }
-

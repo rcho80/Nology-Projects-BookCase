@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap"
-      rel="stylesheet"
-    />
-    <title>Book Case</title>
-  </head>
-  <body>
-    <header>
-      <h1 class="title">Encontra</h1>
-      <p class="title__intro">
-        Welcome to Encontra. A comprehensive digital library for reading enthusiasts.
-        <br />Search for books based on a Title, Author or Topic. Enjoy your
-        browsing & hope to see you again!
-      </p>
-    </header>
-    <main>
-      <form id="apiForm" class="form">
-        <label for="query">Find Books:</label>
-        <input class="form__input" id="query" type="text" required autofocus />
-        <button class="form__btn">Search</button>
-      </form>
-        <div id="data" class="cards grid grid__center grid____align-center grid__justify-content grid__gap">
-        </div>
-    </main>
-    <footer>Created by_RC_2021</footer>
-    <script type="module" src="./api.js" charset="utf-8"></script>
-    <script type="module" src="./dom.js" charset="utf-8"></script>
-    <script type="module" src="./dom-utils.js" charset="utf-8"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap"
+            rel="stylesheet"
+        />
+        <title>Encontra Library</title>
+    </head>
+    <body>
+        <header>
+            <h1 class="title">Encontra</h1>
+            <p class="title__intro">
+                Welcome to Encontra. A comprehensive digital library for reading
+                enthusiasts.
+                <br />Search for books based on a Title, Author or Topic. Enjoy
+                your browsing & hope to see you again!
+            </p>
+        </header>
+        <main>
+            <form id="apiForm" class="form">
+                <label for="query">Find Books:</label>
+                <input
+                    class="form__input"
+                    id="query"
+                    type="text"
+                    required
+                    autofocus
+                />
+                <button class="form__btn">Search</button>
+            </form>
+            <div
+                id="data"
+                class="
+                    cards
+                    grid
+                    grid__center
+                    grid____align-center
+                    grid__justify-content
+                    grid__gap
+                "
+            ></div>
+        </main>
+        <footer>Created by_RC_2021</footer>
+        <script type="module" src="./api.js" charset="utf-8"></script>
+        <script type="module" src="./dom.js" charset="utf-8"></script>
+        <script type="module" src="./dom-utils.js" charset="utf-8"></script>
+    </body>
 </html>
